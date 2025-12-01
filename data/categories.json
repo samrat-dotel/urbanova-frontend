@@ -1,0 +1,126 @@
+[
+  {
+    "top_level_id": 1,
+    "name": "Men",
+    "super_categories": [
+      {
+        "super_category_id": 101,
+        "name": "Upperwears",
+        "categories": [
+          { "category_id": 1001, "name": "T-Shirts" },
+          { "category_id": 1002, "name": "Shirts" },
+          { "category_id": 1003, "name": "Hoodies & Sweatshirts" }
+        ]
+      },
+      {
+        "super_category_id": 102,
+        "name": "Bottomwears",
+        "categories": [
+          { "category_id": 1004, "name": "Jeans" },
+          { "category_id": 1005, "name": "Trousers" },
+          { "category_id": 1006, "name": "Shorts" }
+        ]
+      },
+      {
+        "super_category_id": 103,
+        "name": "Footwears",
+        "categories": [
+          { "category_id": 1007, "name": "Sneakers" },
+          { "category_id": 1008, "name": "Formal Shoes" },
+          { "category_id": 1009, "name": "Sandals" }
+        ]
+      },
+      {
+        "super_category_id": 104,
+        "name": "Innerwears",
+        "categories": [
+          { "category_id": 1010, "name": "Vests" },
+          { "category_id": 1011, "name": "Boxers" }
+        ]
+      }
+    ]
+  },
+  {
+    "top_level_id": 2,
+    "name": "Women",
+    "super_categories": [
+      {
+        "super_category_id": 201,
+        "name": "Upperwears",
+        "categories": [
+          { "category_id": 2001, "name": "Tops" },
+          { "category_id": 2002, "name": "Shirts & Blouses" },
+          { "category_id": 2003, "name": "Hoodies & Sweatshirts" }
+        ]
+      },
+      {
+        "super_category_id": 202,
+        "name": "Bottomwears",
+        "categories": [
+          { "category_id": 2004, "name": "Jeans" },
+          { "category_id": 2005, "name": "Trousers & Pants" },
+          { "category_id": 2006, "name": "Skirts & Shorts" }
+        ]
+      },
+      {
+        "super_category_id": 203,
+        "name": "Footwears",
+        "categories": [
+          { "category_id": 2007, "name": "Flats" },
+          { "category_id": 2008, "name": "Heels" },
+          { "category_id": 2009, "name": "Sneakers" }
+        ]
+      },
+      {
+        "super_category_id": 204,
+        "name": "Innerwears",
+        "categories": [
+          { "category_id": 2010, "name": "Bras" },
+          { "category_id": 2011, "name": "Panties" },
+          { "category_id": 2012, "name": "Lingerie Sets" }
+        ]
+      }
+    ]
+  },
+  {
+    "top_level_id": 3,
+    "name": "Kids",
+    "super_categories": [
+      {
+        "super_category_id": 301,
+        "name": "Upperwears",
+        "categories": [
+          { "category_id": 3001, "name": "T-Shirts" },
+          { "category_id": 3002, "name": "Shirts" },
+          { "category_id": 3003, "name": "Sweatshirts & Hoodies" }
+        ]
+      },
+      {
+        "super_category_id": 302,
+        "name": "Bottomwears",
+        "categories": [
+          { "category_id": 3004, "name": "Jeans" },
+          { "category_id": 3005, "name": "Trousers" },
+          { "category_id": 3006, "name": "Shorts" }
+        ]
+      },
+      {
+        "super_category_id": 303,
+        "name": "Footwears",
+        "categories": [
+          { "category_id": 3007, "name": "Sneakers" },
+          { "category_id": 3008, "name": "Sandals" },
+          { "category_id": 3009, "name": "School Shoes" }
+        ]
+      },
+      {
+        "super_category_id": 304,
+        "name": "Innerwears",
+        "categories": [
+          { "category_id": 3010, "name": "Vests" },
+          { "category_id": 3011, "name": "Boxers & Briefs" }
+        ]
+      }
+    ]
+  }
+]
