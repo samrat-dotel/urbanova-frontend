@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import Card from "@/components/Cards";
+import CarouselCards from "@/components/CarouselCards";
 import styles from "./MenPage.module.css";
 import Navbar from "@/components/Navbar";
 import products from "../../data/products.json";
@@ -16,7 +16,7 @@ export default function MenPage() {
 
         <section className={styles.section}>
           <h2 className={styles.sectionHeading}>All Men</h2>
-          <Card topCategoryId={1} products={products} />
+          <CarouselCards topCategoryId={1} products={products} />
         </section>
 
         {(() => {
@@ -28,7 +28,7 @@ export default function MenPage() {
               {superCat.categories.map((cat) => (
                 <div key={cat.category_id} style={{ marginBottom: 20 }}>
                   <h3 className={styles.categoryName}>{cat.name}</h3>
-                  <Card topCategoryId={1} categoryId={cat.category_id} products={products} />
+                  <CarouselCards topCategoryId={1} categoryId={cat.category_id} products={products} />
                 </div>
               ))}
             </section>
