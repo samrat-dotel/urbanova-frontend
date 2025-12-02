@@ -7,6 +7,7 @@ import ratings from '../../data/ratings.json';
 import Link from 'next/link';
 import styles from '../recently-added/RecentlyAdded.module.css';
 import ProductCard from '@/components/ProductCard';
+import Button from '@/components/Button';
 
 export default function FavoritesPage() {
   const itemsPerPage = 9;
@@ -41,7 +42,7 @@ export default function FavoritesPage() {
         <main className={styles.mainContainer}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
           <h1 className={styles.header}>Favorites</h1>
-          <Link href="/">Back home</Link>
+           <Link href="/"><Button>Back home</Button></Link>
         </div>
 
         <section>

@@ -7,6 +7,7 @@ import Link from 'next/link';
 import styles from './RecentlyAdded.module.css';
 import ratings from '../../data/ratings.json';
 import ProductCard from '@/components/ProductCard';
+import Button from '@/components/Button';
 
 export default function RecentlyAddedPage() {
   const itemsPerPage = 9;
@@ -31,7 +32,7 @@ export default function RecentlyAddedPage() {
       <main className={styles.mainContainer}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
           <h1 className={styles.header}>Recently Added</h1>
-          <Link href="/" style={{fontWeight: "bold"}}>Back home</Link>
+           <Link href="/"><Button>Back home</Button></Link>
         </div>
 
         <section>
@@ -40,9 +41,7 @@ export default function RecentlyAddedPage() {
               const r = ratingsMap.get(product.product_id) || null;
               return (
                 <div key={product.product_id} className={styles.item}>
-                  <Link href={`/product/${product.product_id}`}>
-                    <ProductCard product={product} rating={r} />
-                  </Link>
+                  <ProductCard product={product} rating={r} />
                 </div>
               );
             })}

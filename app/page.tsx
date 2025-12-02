@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Button from '@/components/Button'
 import Navbar from '@/components/Navbar'
 import CarouselCards from '@/components/CarouselCards'
 import products from '../data/products.json'
@@ -39,19 +40,19 @@ const HomePage = () => {
     <div>
       <Navbar />
 
-      <main style={{ padding: '24px' }}>
-        <section style={{ marginBottom: 28 }}>
+      <main style={{ padding: '12px 40px' }}>
+        <section style={{ marginBottom: 50 }}>
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline'}}>
-            <h2 style={{ fontSize: 22, margin: '6px 0 12px', fontWeight: 'bold' }}>Favorites</h2>
-            <Link href="/favorites"><button style={{padding: '6px 10px', borderRadius: 6, cursor: 'pointer'}}>View more</button></Link>
+            <h2 style={{ fontSize: 36, margin: '6px 0 24px', fontWeight: 'bold' }}>Favorites</h2>
+            <Link href="/favorites"><Button>View more</Button></Link>
           </div>
           <CarouselCards products={favorites} />
         </section>
 
-        <section style={{ marginBottom: 28 }}>
+        <section style={{ marginBottom: 50 }}>
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline'}}>
-            <h2 style={{ fontSize: 22, margin: '6px 0 12px', fontWeight: 'bold' }}>Recently Added</h2>
-            <Link href="/recently-added"><button style={{padding: '6px 10px', borderRadius: 6, cursor: 'pointer'}}>View more</button></Link>
+            <h2 style={{ fontSize: 36, margin: '6px 0 24px', fontWeight: 'bold' }}>Recently Added</h2>
+            <Link href="/recently-added"><Button>View more</Button></Link>
           </div>
           <CarouselCards products={recent} />
         </section>

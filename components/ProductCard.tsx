@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Cards.module.css";
@@ -26,36 +26,36 @@ interface Rating {
 interface Props {
   product: Product;
   rating?: Rating | null;
+  link?: boolean;
 }
 
-export default function ProductCard({ product, rating }: Props) {
-  const [fallback, setFallback] = useState<string | null>(null);
-
+export default function ProductCard({ product, rating, link = true }: Props) {
   const imgSrc = (() => {
-    if (fallback) return fallback;
     const url = product?.image_urls?.[0];
     if (!url) return "/images/download.jpeg";
     try {
       const parsed = new URL(url);
       if (parsed.hostname.includes("example.com")) return "/images/download.jpeg";
       return url;
-    } catch (e) {
+    } catch {
       return "/images/download.jpeg";
     }
   })();
 
-  return (
-    <main>
-        <Link href={`/product/${product.product_id}`} className={styles.cardLink}>
-      <div className={styles.card}>
-        <div className={styles.imageWrapper}>
+  const content = (
+    <div className={styles.card}>
+      {/* Image wrapper must have position: relative and fixed height */}
+      <div className={styles.imageWrapper}>
           <Image
             src={imgSrc}
-            alt={(product && product.name) || "product"}
+            alt={product.name || "product"}
             fill
             className={styles.cardImg}
             unoptimized
-            onError={() => setFallback("/images/download.jpeg")}
+            onError={(e) => {
+              // Client-only fallback without changing React state
+              (e.currentTarget as HTMLImageElement).src = "/images/download.jpeg";
+            }}
           />
         </div>
 
@@ -63,28 +63,19 @@ export default function ProductCard({ product, rating }: Props) {
         <p className={styles.cardDesc}>{product.description}</p>
 
         <div className={styles.metaRow}>
-          {(() => {
-            const avg = rating?.average_rating;
-            const reviews = rating?.total_reviews || 0;
-            const soldEstimate = Math.round(reviews * 2);
-            return (
+          <div className={styles.rating}>
+            {rating?.average_rating ? (
               <>
-                <div className={styles.rating}>
-                  {avg ? (
-                    <>
-                      <span className={styles.star}>★</span>
-                      <span className={styles.avg}>{avg.toFixed(1)}</span>
-                    </>
-                  ) : (
-                    <span className={styles.noRating}>—</span>
-                  )}
-                </div>
-
-                <div className={styles.reviews}>{reviews} reviews</div>
-                <div className={styles.sold}>{soldEstimate} sold</div>
+                <span className={styles.star}>★</span>
+                <span className={styles.avg}>{rating.average_rating.toFixed(1)}</span>
               </>
-            );
-          })()}
+            ) : (
+              <span className={styles.noRating}>—</span>
+            )}
+          </div>
+
+          <div className={styles.reviews}>{rating?.total_reviews || 0} reviews</div>
+          <div className={styles.sold}>{Math.round((rating?.total_reviews || 0) * 2)} sold</div>
         </div>
 
         <div className={styles.cardPrice}>
@@ -93,7 +84,9 @@ export default function ProductCard({ product, rating }: Props) {
               <span className={styles.priceDiscounted}>Rs. {product.pricing.discounted_price}</span>
               <span className={styles.priceOriginal}>Rs. {product.pricing.original_price}</span>
               {product.pricing.discount_percentage !== undefined && (
-                <span className={styles.priceOff}>({product.pricing.discount_percentage}% OFF)</span>
+                <span className={styles.priceOff}>
+                  ({product.pricing.discount_percentage}% OFF)
+                </span>
               )}
             </>
           ) : (
@@ -101,7 +94,15 @@ export default function ProductCard({ product, rating }: Props) {
           )}
         </div>
       </div>
-    </Link>
-    </main>
   );
+
+  if (link) {
+    return (
+      <Link href={`/product/${product.product_id}`} className={styles.cardLink}>
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 }

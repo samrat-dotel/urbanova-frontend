@@ -3,15 +3,15 @@
 }
 
 .header {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 700;
-  margin: 0;
+  margin-bottom: 6px;
+  color: var(--text);
 }
 
 .listContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
   margin-top: 12px;
   align-items: center;
   justify-content: center;
