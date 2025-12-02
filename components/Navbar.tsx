@@ -3,9 +3,10 @@
 // components/Navbar.tsx
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
+import router from "next/router";
 import Link from "next/link";
 import { FiSearch, FiUser, FiHeart, FiShoppingBag } from "react-icons/fi";
-import categoriesData from "../data/categories.json"; // adjust path
+import categoriesData from "../data/categories.json"; 
 
 export default function Navbar() {
   const [hoveredTop, setHoveredTop] = useState<number | null>(null);
@@ -25,7 +26,7 @@ export default function Navbar() {
             onMouseEnter={() => setHoveredTop(top.top_level_id)}
             onMouseLeave={() => setHoveredTop(null)}
           >
-            <span className={styles.navLink}>{top.name}</span>
+            <Link href={`/${top.name.toLowerCase()}`}>{top.name}</Link>
 
             {/* Mega-menu */}
             {hoveredTop === top.top_level_id && (

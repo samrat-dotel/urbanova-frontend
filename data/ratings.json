@@ -1,0 +1,37 @@
+[
+  { "rating_id": "R001", "product_id": "P001", "average_rating": 4.3, "total_reviews": 240 },
+  { "rating_id": "R002", "product_id": "P002", "average_rating": 4.1, "total_reviews": 190 },
+  { "rating_id": "R003", "product_id": "P003", "average_rating": 4.6, "total_reviews": 400 },
+  { "rating_id": "R004", "product_id": "P004", "average_rating": 4.2, "total_reviews": 210 },
+  { "rating_id": "R005", "product_id": "P005", "average_rating": 4.0, "total_reviews": 180 },
+
+  { "rating_id": "R006", "product_id": "P006", "average_rating": 4.3, "total_reviews": 130 },
+  { "rating_id": "R007", "product_id": "P007", "average_rating": 4.5, "total_reviews": 260 },
+  { "rating_id": "R008", "product_id": "P008", "average_rating": 4.1, "total_reviews": 150 },
+  { "rating_id": "R009", "product_id": "P009", "average_rating": 4.0, "total_reviews": 100 },
+  { "rating_id": "R010", "product_id": "P010", "average_rating": 4.4, "total_reviews": 210 },
+
+  { "rating_id": "R011", "product_id": "P011", "average_rating": 4.6, "total_reviews": 300 },
+  { "rating_id": "R012", "product_id": "P012", "average_rating": 4.2, "total_reviews": 200 },
+  { "rating_id": "R013", "product_id": "P013", "average_rating": 4.4, "total_reviews": 170 },
+  { "rating_id": "R014", "product_id": "P014", "average_rating": 4.3, "total_reviews": 140 },
+  { "rating_id": "R015", "product_id": "P015", "average_rating": 4.5, "total_reviews": 260 },
+
+  { "rating_id": "R016", "product_id": "P016", "average_rating": 4.1, "total_reviews": 110 },
+  { "rating_id": "R017", "product_id": "P017", "average_rating": 4.2, "total_reviews": 150 },
+  { "rating_id": "R018", "product_id": "P018", "average_rating": 4.0, "total_reviews": 115 },
+  { "rating_id": "R019", "product_id": "P019", "average_rating": 4.3, "total_reviews": 169 },
+  { "rating_id": "R020", "product_id": "P020", "average_rating": 4.6, "total_reviews": 280 },
+
+  { "rating_id": "R021", "product_id": "P021", "average_rating": 4.4, "total_reviews": 220 },
+  { "rating_id": "R022", "product_id": "P022", "average_rating": 4.2, "total_reviews": 190 },
+  { "rating_id": "R023", "product_id": "P023", "average_rating": 4.5, "total_reviews": 260 },
+  { "rating_id": "R024", "product_id": "P024", "average_rating": 4.3, "total_reviews": 150 },
+  { "rating_id": "R025", "product_id": "P025", "average_rating": 4.1, "total_reviews": 120 },
+
+  { "rating_id": "R026", "product_id": "P026", "average_rating": 4.2, "total_reviews": 180 },
+  { "rating_id": "R027", "product_id": "P027", "average_rating": 4.0, "total_reviews": 140 },
+  { "rating_id": "R028", "product_id": "P028", "average_rating": 4.3, "total_reviews": 210 },
+  { "rating_id": "R029", "product_id": "P029", "average_rating": 4.5, "total_reviews": 250 },
+  { "rating_id": "R030", "product_id": "P030", "average_rating": 4.4, "total_reviews": 190 }
+]

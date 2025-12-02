@@ -1,0 +1,36 @@
+.container {
+  padding: 20px 40px;
+}
+
+.mainHeading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.section {
+  padding: 18px 20px;
+  border-radius: 10px;
+}
+
+.section:nth-of-type(even) {
+  background: var(--bg);
+}
+
+.sectionHeading {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: var(--accent-600);
+}
+
+.categoryName {
+  font-size: 18px;
+  color: var(--text);
+  margin: 8px 0;
+}

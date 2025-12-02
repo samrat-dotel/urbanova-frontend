@@ -1,0 +1,37 @@
+[
+  { "variant_id": "V001", "product_id": "P001", "color": "Black", "size": "M", "sku": "SKU-001-M", "price": 799, "stock": 20 },
+  { "variant_id": "V002", "product_id": "P002", "color": "Blue", "size": "32", "sku": "SKU-002-32", "price": 2124, "stock": 12 },
+  { "variant_id": "V003", "product_id": "P003", "color": "Grey", "size": "9", "sku": "SKU-003-9", "price": 3749, "stock": 10 },
+  { "variant_id": "V004", "product_id": "P004", "color": "Red", "size": "L", "sku": "SKU-004-L", "price": 1799, "stock": 15 },
+  { "variant_id": "V005", "product_id": "P005", "color": "White", "size": "40", "sku": "SKU-005-40", "price": 1439, "stock": 14 },
+
+  { "variant_id": "V006", "product_id": "P006", "color": "Olive", "size": "34", "sku": "SKU-006-34", "price": 1803, "stock": 14 },
+  { "variant_id": "V007", "product_id": "P007", "color": "White", "size": "8", "sku": "SKU-007-8", "price": 3519, "stock": 11 },
+  { "variant_id": "V008", "product_id": "P008", "color": "Black", "size": "L", "sku": "SKU-008-L", "price": 1039, "stock": 5 },
+  { "variant_id": "V009", "product_id": "P009", "color": "Black", "size": "Free", "sku": "SKU-009-F", "price": 719, "stock": 18 },
+  { "variant_id": "V010", "product_id": "P010", "color": "Mixed", "size": "XL", "sku": "SKU-010-XL", "price": 664, "stock": 22 },
+
+  { "variant_id": "V011", "product_id": "P011", "color": "Pink", "size": "S", "sku": "SKU-011-S", "price": 737, "stock": 19 },
+  { "variant_id": "V012", "product_id": "P012", "color": "Dark Blue", "size": "28", "sku": "SKU-012-28", "price": 1759, "stock": 8 },
+  { "variant_id": "V013", "product_id": "P013", "color": "Pink", "size": "5", "sku": "SKU-013-5", "price": 2804, "stock": 7 },
+  { "variant_id": "V014", "product_id": "P014", "color": "Yellow", "size": "M", "sku": "SKU-014-M", "price": 1124, "stock": 10 },
+  { "variant_id": "V015", "product_id": "P015", "color": "Maroon", "size": "L", "sku": "SKU-015-L", "price": 1799, "stock": 9 },
+
+  { "variant_id": "V016", "product_id": "P016", "color": "Brown", "size": "6", "sku": "SKU-016-6", "price": 1169, "stock": 12 },
+  { "variant_id": "V017", "product_id": "P017", "color": "Blue", "size": "Free", "sku": "SKU-017-F", "price": 799, "stock": 20 },
+  { "variant_id": "V018", "product_id": "P018", "color": "Beige", "size": "4", "sku": "SKU-018-4", "price": 809, "stock": 10 },
+  { "variant_id": "V019", "product_id": "P019", "color": "Black", "size": "M", "sku": "SKU-019-M", "price": 664, "stock": 15 },
+  { "variant_id": "V020", "product_id": "P020", "color": "Red", "size": "M", "sku": "SKU-020-M", "price": 1749, "stock": 6 },
+
+  { "variant_id": "V021", "product_id": "P021", "color": "Blue", "size": "XS", "sku": "SKU-021-XS", "price": 449, "stock": 25 },
+  { "variant_id": "V022", "product_id": "P022", "color": "Dark Blue", "size": "22", "sku": "SKU-022-22", "price": 719, "stock": 14 },
+  { "variant_id": "V023", "product_id": "P023", "color": "Black", "size": "3", "sku": "SKU-023-3", "price": 1349, "stock": 9 },
+  { "variant_id": "V024", "product_id": "P024", "color": "Green", "size": "S", "sku": "SKU-024-S", "price": 1019, "stock": 10 },
+  { "variant_id": "V025", "product_id": "P025", "color": "Blue", "size": "2", "sku": "SKU-025-2", "price": 899, "stock": 18 },
+
+  { "variant_id": "V026", "product_id": "P026", "color": "Grey", "size": "XS", "sku": "SKU-026-XS", "price": 509, "stock": 12 },
+  { "variant_id": "V027", "product_id": "P027", "color": "Red", "size": "Free", "sku": "SKU-027-F", "price": 359, "stock": 22 },
+  { "variant_id": "V028", "product_id": "P028", "color": "White", "size": "S", "sku": "SKU-028-S", "price": 474, "stock": 19 },
+  { "variant_id": "V029", "product_id": "P029", "color": "Pink", "size": "S", "sku": "SKU-029-S", "price": 674, "stock": 8 },
+  { "variant_id": "V030", "product_id": "P030", "color": "Blue", "size": "4", "sku": "SKU-030-4", "price": 1279, "stock": 11 }
+]
