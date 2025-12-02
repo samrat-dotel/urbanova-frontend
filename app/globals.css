@@ -15,7 +15,7 @@
   --shadow-card: 0 8px 20px rgba(16,24,40,0.06);
 }
 
-@theme inline {
+:root[data-theme="inline"] {
   --color-background: var(--bg);
   --color-foreground: var(--text);
   --font-sans: var(--font-geist-sans);
@@ -30,7 +30,7 @@
     --muted: black;
     --border: #122231;
     --accent: rgb(181, 171, 171);
-    --accent-600: black;
+    --accent-600: rgb(20, 18, 18);
   }
 }
 
