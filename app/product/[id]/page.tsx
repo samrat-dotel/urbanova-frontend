@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '@/components/Navbar';
 import products from '../../../data/products.json';
 import ratings from '../../../data/ratings.json';
 import Image from 'next/image';
@@ -15,12 +14,9 @@ export default async function ProductPage({ params }: Props) {
   const product = (products as any[]).find((p) => String(p.product_id) === String(id));
   if (!product) {
     return (
-      <div>
-        <Navbar />
         <main style={{ padding: 24 }}>
           <h2>Product not found</h2>
         </main>
-      </div>
     );
   }
 
@@ -39,8 +35,6 @@ export default async function ProductPage({ params }: Props) {
   })();
 
   return (
-    <div>
-      <Navbar />
       <main className={styles.container}>
         <div className={styles.gallery}>
           <div className={styles.mainImage}>
@@ -85,6 +79,5 @@ export default async function ProductPage({ params }: Props) {
           </section>
         </div>
       </main>
-    </div>
   );
 }

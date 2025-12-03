@@ -2,14 +2,11 @@
 
 import CarouselCards from "@/components/CarouselCards";
 import styles from "./NavItems.module.css";
-import Navbar from "@/components/Navbar";
 import products from "../../data/products.json";
 import categories from "../../data/categories.json";
 
 export default function MenPage() {
   return (
-    <>
-      <Navbar />
       <main className={styles.container}>
 
         <h1 className={styles.mainHeading}>Men's Collection</h1>
@@ -35,7 +32,5 @@ export default function MenPage() {
           ));
         })()}
       </main>
-
-    </>
   );
 }

@@ -8,8 +8,6 @@ import categories from "../../data/categories.json";
 
 export default function WomenPage() {
   return (
-    <>
-      <Navbar />
       <main className={styles.container}>
 
         <h1 className={styles.mainHeading}>Women's Collection</h1>
@@ -35,7 +33,5 @@ export default function WomenPage() {
           ));
         })()}
       </main>
-
-    </>
   );
 }

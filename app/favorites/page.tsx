@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from 'react';
-import Navbar from '@/components/Navbar';
 import products from '../../data/products.json';
 import ratings from '../../data/ratings.json';
 import Link from 'next/link';
@@ -37,8 +36,6 @@ export default function FavoritesPage() {
   const pageItems = favorites.slice(start, start + itemsPerPage);
 
   return (
-    <>
-      <Navbar />
         <main className={styles.mainContainer}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
           <h1 className={styles.header}>Favorites</h1>
@@ -69,6 +66,5 @@ export default function FavoritesPage() {
           </button>
         </footer>
       </main>
-    </>
   );
 }

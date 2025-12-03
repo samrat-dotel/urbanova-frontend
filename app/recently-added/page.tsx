@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from 'react';
-import Navbar from '@/components/Navbar';
 import products from '../../data/products.json';
 import Link from 'next/link';
 import styles from './RecentlyAdded.module.css';
@@ -27,8 +26,6 @@ export default function RecentlyAddedPage() {
   const pageItems = recent.slice(start, start + itemsPerPage);
 
   return (
-    <>
-      <Navbar />
       <main className={styles.mainContainer}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
           <h1 className={styles.header}>Recently Added</h1>
@@ -60,6 +57,5 @@ export default function RecentlyAddedPage() {
           </button>
         </footer>
       </main>
-    </>
   );
 }

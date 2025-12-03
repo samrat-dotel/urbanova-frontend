@@ -2,14 +2,11 @@
 
 import CarouselCards from "@/components/CarouselCards";
 import styles from "../men/NavItems.module.css";
-import Navbar from "@/components/Navbar";
 import products from "../../data/products.json";
 import categories from "../../data/categories.json";
 
 export default function KidsPage() {
   return (
-    <>
-      <Navbar />
       <main className={styles.container}>
 
         <h1 className={styles.mainHeading}>Kids' Collection</h1>
@@ -36,7 +33,5 @@ export default function KidsPage() {
           ));
         })()}
       </main>
-
-    </>
   );
 }

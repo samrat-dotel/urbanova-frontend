@@ -1,13 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 import Button from '@/components/Button'
-import Navbar from '@/components/Navbar'
 import CarouselCards from '@/components/CarouselCards'
+import HeroSlideshow from '@/components/HeroSlideshow'
 import products from '../data/products.json'
 import ratings from '../data/ratings.json'
 
 const HomePage = () => {
-  // sort products by created_at descending (newest first)
   const recent = [...(products as any[])]
     .sort((a, b) => {
       const ta = a.created_at ? new Date(a.created_at).getTime() : 0
@@ -25,7 +24,6 @@ const HomePage = () => {
       const reviews = r.total_reviews || 0;
       const soldEstimate = reviews * 2; 
 
-      // normalized components
       const avgNorm = avg / 5; // 0..1
       const reviewsNorm = reviews / maxReviews; // 0..1
       const soldNorm = soldEstimate / (maxReviews * 2 || 1); // 0..1
@@ -37,10 +35,9 @@ const HomePage = () => {
     
 
   return (
-    <div>
-      <Navbar />
-
       <main style={{ padding: '12px 40px' }}>
+        <HeroSlideshow />
+
         <section style={{ marginBottom: 50 }}>
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline'}}>
             <h2 style={{ fontSize: 36, margin: '6px 0 24px', fontWeight: 'bold' }}>Favorites</h2>
@@ -57,7 +54,6 @@ const HomePage = () => {
           <CarouselCards products={recent} />
         </section>
       </main>
-    </div>
   )
 }
 
