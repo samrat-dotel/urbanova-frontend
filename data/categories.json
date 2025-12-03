@@ -37,6 +37,15 @@
           { "category_id": 1010, "name": "Vests" },
           { "category_id": 1011, "name": "Boxers" }
         ]
+      },
+      {
+        "super_category_id": 105,
+        "name": "Accessories",
+        "categories": [
+          { "category_id": 1012, "name": "Watches" },
+          { "category_id": 1013, "name": "Belts" },
+          { "category_id": 1014, "name": "Hats & Caps" }
+        ]
       }
     ]
   },

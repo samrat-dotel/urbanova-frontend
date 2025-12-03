@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './HeroSlideshow.module.css';
 
-const IMAGES = ['/images/banner1.jpeg', '/images/banner2.jpeg'];
+const IMAGES = ['/images/banner1.jpeg', '/images/banner2.jpeg', '/images/banner3.jpeg', '/images/banner4.jpeg', '/images/banner5.jpeg'];
 
 export default function HeroSlideshow() {
   const [idx, setIdx] = useState(0);
@@ -29,9 +29,6 @@ export default function HeroSlideshow() {
         ))}
       </div>
 
-      <div className={styles.shape} style={{ '--left': '8%', '--size': '96px', '--delay': '0s' } as any} aria-hidden />
-      <div className={styles.shape} style={{ '--left': '78%', '--size': '120px', '--delay': '1.2s' } as any} aria-hidden />
-      <div className={styles.shapeSmall} style={{ '--left': '45%', '--size': '56px', '--delay': '0.6s' } as any} aria-hidden />
     </section>
   );
 }
