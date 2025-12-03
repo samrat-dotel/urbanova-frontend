@@ -5,6 +5,7 @@ import CarouselCards from '@/components/CarouselCards'
 import HeroSlideshow from '@/components/HeroSlideshow'
 import products from '../data/products.json'
 import ratings from '../data/ratings.json'
+import styles from './page.module.css'
 
 const HomePage = () => {
   const recent = [...(products as any[])]
@@ -24,36 +25,39 @@ const HomePage = () => {
       const reviews = r.total_reviews || 0;
       const soldEstimate = reviews * 2; 
 
-      const avgNorm = avg / 5; // 0..1
-      const reviewsNorm = reviews / maxReviews; // 0..1
-      const soldNorm = soldEstimate / (maxReviews * 2 || 1); // 0..1
+      const avgNorm = avg / 5;
+      const reviewsNorm = reviews / maxReviews;
+      const soldNorm = soldEstimate / (maxReviews * 2 || 1);
 
       const score = avgNorm * 0.6 + reviewsNorm * 0.3 + soldNorm * 0.1;
       return { ...p, _score: score };
     })
     .sort((a, b) => b._score - a._score)
-    
 
   return (
-      <main style={{ padding: '12px 40px' }}>
-        <HeroSlideshow />
+    <main className={styles.main}>
+      <HeroSlideshow />
 
-        <section style={{ marginBottom: 50 }}>
-          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline'}}>
-            <h2 style={{ fontSize: 36, margin: '6px 0 24px', fontWeight: 'bold' }}>Favorites</h2>
-            <Link href="/favorites"><Button>View more</Button></Link>
-          </div>
-          <CarouselCards products={favorites} />
-        </section>
+      <section className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Favorites</h2>
+          <Link href="/favorites">
+            <Button>View more</Button>
+          </Link>
+        </div>
+        <CarouselCards products={favorites} />
+      </section>
 
-        <section style={{ marginBottom: 50 }}>
-          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline'}}>
-            <h2 style={{ fontSize: 36, margin: '6px 0 24px', fontWeight: 'bold' }}>Recently Added</h2>
-            <Link href="/recently-added"><Button>View more</Button></Link>
-          </div>
-          <CarouselCards products={recent} />
-        </section>
-      </main>
+      <section className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Recently Added</h2>
+          <Link href="/recently-added">
+            <Button>View more</Button>
+          </Link>
+        </div>
+        <CarouselCards products={recent} />
+      </section>
+    </main>
   )
 }
 

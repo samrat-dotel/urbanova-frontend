@@ -7,6 +7,9 @@
   font-weight: 700;
   margin-bottom: 6px;
   color: var(--text);
+  border-left: 10px solid var(--accent-600);
+  padding-left: 15px;
+  line-height: 100%;
 }
 
 .listContainer {
